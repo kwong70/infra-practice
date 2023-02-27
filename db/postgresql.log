@@ -1,0 +1,59 @@
+2023-02-19 11:39:45.384 EST [59190] LOG:  starting PostgreSQL 15.2 on aarch64-apple-darwin21.6.0, compiled by Apple clang version 14.0.0 (clang-1400.0.29.102), 64-bit
+2023-02-19 11:39:45.386 EST [59190] LOG:  listening on IPv6 address "::1", port 5432
+2023-02-19 11:39:45.386 EST [59190] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2023-02-19 11:39:45.387 EST [59190] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2023-02-19 11:39:45.390 EST [59193] LOG:  database system was shut down at 2023-02-19 11:39:45 EST
+2023-02-19 11:39:45.392 EST [59190] LOG:  database system is ready to accept connections
+2023-02-19 11:40:52.464 EST [59465] ERROR:  syntax error at or near "USE" at character 1
+2023-02-19 11:40:52.464 EST [59465] STATEMENT:  USE myapp;
+2023-02-19 11:41:07.029 EST [59465] ERROR:  syntax error at or near "AUTO_INCREMENT" at character 40
+2023-02-19 11:41:07.029 EST [59465] STATEMENT:  CREATE TABLE users (id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(50), age INT);
+2023-02-19 11:44:45.396 EST [59191] LOG:  checkpoint starting: time
+2023-02-19 12:05:08.468 EST [59191] LOG:  checkpoint complete: wrote 1897 buffers (11.6%); 0 WAL file(s) added, 0 removed, 1 recycled; write=1222.976 s, sync=0.093 s, total=1223.073 s; sync files=510, longest=0.008 s, average=0.001 s; distance=8883 kB, estimate=8883 kB
+2023-02-19 15:03:50.682 EST [60990] ERROR:  relation "users" does not exist at character 15
+2023-02-19 15:03:50.682 EST [60990] STATEMENT:  SELECT * FROM users
+2023-02-19 15:10:31.275 EST [61208] ERROR:  syntax error at or near "AUTO_INCREMENT" at character 40
+2023-02-19 15:10:31.275 EST [61208] STATEMENT:  CREATE TABLE users (id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(50), age INT);
+2023-02-19 15:10:41.094 EST [61208] ERROR:  syntax error at or near "AUTO_INCREMENT" at character 40
+2023-02-19 15:10:41.094 EST [61208] STATEMENT:  CREATE TABLE users (id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(50), age INT);
+2023-02-19 15:15:52.359 EST [59191] LOG:  checkpoint starting: time
+2023-02-19 15:15:57.548 EST [59191] LOG:  checkpoint complete: wrote 52 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=5.171 s, sync=0.008 s, total=5.189 s; sync files=40, longest=0.002 s, average=0.001 s; distance=185 kB, estimate=8013 kB
+2023-02-19 15:20:55.349 EST [60990] ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2023-02-19 15:20:55.349 EST [60990] STATEMENT:  SELECT * FROM users
+2023-02-19 15:25:52.569 EST [59191] LOG:  checkpoint starting: time
+2023-02-19 15:25:53.695 EST [59191] LOG:  checkpoint complete: wrote 12 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.120 s, sync=0.004 s, total=1.127 s; sync files=9, longest=0.002 s, average=0.001 s; distance=29 kB, estimate=7215 kB
+2023-02-19 15:43:35.460 EST [62475] ERROR:  relation "user" does not exist at character 13
+2023-02-19 15:43:35.460 EST [62475] STATEMENT:  INSERT INTO "user" (name, age) VALUES ('John Doe', 30) RETURNING "user".id
+2023-02-19 15:44:34.192 EST [62475] ERROR:  relation "user" does not exist at character 85
+2023-02-19 15:44:34.192 EST [62475] STATEMENT:  SELECT "user".id AS user_id, "user".name AS user_name, "user".age AS user_age 
+	FROM "user"
+2023-02-19 15:50:52.701 EST [59191] LOG:  checkpoint starting: time
+2023-02-19 15:50:53.018 EST [59191] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.311 s, sync=0.002 s, total=0.320 s; sync files=4, longest=0.002 s, average=0.001 s; distance=0 kB, estimate=6493 kB
+2023-02-20 11:02:17.624 EST [59190] LOG:  received smart shutdown request
+2023-02-20 11:02:17.629 EST [59190] LOG:  background worker "logical replication launcher" (PID 59196) exited with exit code 1
+2023-02-20 11:02:17.630 EST [59191] LOG:  shutting down
+2023-02-20 11:02:17.631 EST [59191] LOG:  checkpoint starting: shutdown immediate
+2023-02-20 11:02:17.641 EST [59191] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.006 s, sync=0.001 s, total=0.012 s; sync files=1, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=5844 kB
+2023-02-20 11:02:17.649 EST [59190] LOG:  database system is shut down
+2023-02-27 15:38:46.144 EST [30957] LOG:  starting PostgreSQL 15.2 on aarch64-apple-darwin21.6.0, compiled by Apple clang version 14.0.0 (clang-1400.0.29.102), 64-bit
+2023-02-27 15:38:46.147 EST [30957] LOG:  listening on IPv6 address "::1", port 5432
+2023-02-27 15:38:46.147 EST [30957] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2023-02-27 15:38:46.148 EST [30957] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2023-02-27 15:38:46.153 EST [30960] LOG:  database system was shut down at 2023-02-20 11:02:17 EST
+2023-02-27 15:38:46.171 EST [30957] LOG:  database system is ready to accept connections
+2023-02-27 15:39:02.963 EST [30957] LOG:  received fast shutdown request
+2023-02-27 15:39:02.964 EST [30957] LOG:  aborting any active transactions
+2023-02-27 15:39:02.967 EST [30957] LOG:  background worker "logical replication launcher" (PID 30963) exited with exit code 1
+2023-02-27 15:39:02.967 EST [30973] FATAL:  terminating connection due to administrator command
+2023-02-27 15:39:02.969 EST [30958] LOG:  shutting down
+2023-02-27 15:39:02.969 EST [30958] LOG:  checkpoint starting: shutdown immediate
+2023-02-27 15:39:02.973 EST [30958] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.001 s, total=0.005 s; sync files=3, longest=0.001 s, average=0.001 s; distance=8 kB, estimate=8 kB
+2023-02-27 15:39:02.978 EST [30957] LOG:  database system is shut down
+2023-02-27 15:39:07.727 EST [30987] LOG:  starting PostgreSQL 15.2 on aarch64-apple-darwin21.6.0, compiled by Apple clang version 14.0.0 (clang-1400.0.29.102), 64-bit
+2023-02-27 15:39:07.729 EST [30987] LOG:  listening on IPv6 address "::1", port 5432
+2023-02-27 15:39:07.729 EST [30987] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2023-02-27 15:39:07.730 EST [30987] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2023-02-27 15:39:07.734 EST [30990] LOG:  database system was shut down at 2023-02-27 15:39:02 EST
+2023-02-27 15:39:07.747 EST [30987] LOG:  database system is ready to accept connections
+2023-02-27 15:44:07.751 EST [30988] LOG:  checkpoint starting: time
+2023-02-27 15:44:07.758 EST [30988] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.001 s, total=0.007 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB
