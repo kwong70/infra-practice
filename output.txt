@@ -1,0 +1,19 @@
+  PID TTY           TIME CMD
+30762 ttys000    0:06.77 /bin/zsh -il
+30767 ttys000    0:00.00 /bin/zsh -il
+30830 ttys000    0:00.00 /bin/zsh -il
+30832 ttys000    0:00.42 /bin/zsh -il
+30833 ttys000    0:02.17 /Users/kwong/.cache/gitstatus/gitstatusd-darwin-x86_64 -G v1.5.4 -s -1 -u -1 -d -1 -c -1 -m -1 -v FATAL -t 8
+59277 ttys000    0:00.96 /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/Resources/Python.app/Contents/MacOS/Python app.py
+59287 ttys000    1:41.71 /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/Resources/Python.app/Contents/MacOS/Python /Users/kwong/infra-practice/app/app.py
+31277 ttys001    0:03.86 /bin/zsh -il
+31282 ttys001    0:00.00 /bin/zsh -il
+31347 ttys001    0:00.00 /bin/zsh -il
+31349 ttys001    0:00.39 /bin/zsh -il
+31350 ttys001    0:01.74 /Users/kwong/.cache/gitstatus/gitstatusd-darwin-x86_64 -G v1.5.4 -s -1 -u -1 -d -1 -c -1 -m -1 -v FATAL -t 8
+60197 ttys001    0:00.00 ps -a
+33069 ttys002    0:07.46 /bin/zsh -il
+33075 ttys002    0:00.01 /bin/zsh -il
+33141 ttys002    0:00.00 /bin/zsh -il
+33143 ttys002    0:00.35 /bin/zsh -il
+33144 ttys002    0:01.98 /Users/kwong/.cache/gitstatus/gitstatusd-darwin-x86_64 -G v1.5.4 -s -1 -u -1 -d -1 -c -1 -m -1 -v FATAL -t 8

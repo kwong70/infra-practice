@@ -2,7 +2,12 @@ from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:password@localhost:5432/myapp'
+db_host = "database-2.chk1uu9qegvf.us-east-1.rds.amazonaws.com"
+db_port = 5432
+db_name = "postgres"
+db_user = "postgres"
+db_password = "password"
+app.config['SQLALCHEMY_DATABASE_URI'] = f'posgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}'
 db = SQLAlchemy(app)    
 
 class User(db.Model):
@@ -14,6 +19,10 @@ class User(db.Model):
     def __init__(self, name, age):
         self.name = name
         self.age = age
+
+@app.route('/healthy', methods=['GET'])
+def healthy(): 
+    return {"status_code": 200}
 
 @app.route('/users', methods=['POST'])
 def create_user():
@@ -63,4 +72,4 @@ def delete_user(user_id):
         return jsonify({'error': 'User not found'}), 404
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0', port=5000)
